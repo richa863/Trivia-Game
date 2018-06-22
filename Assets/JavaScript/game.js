@@ -26,7 +26,7 @@ $(document).ready(function () {
                 if (index < questionArray.length) {
                     loadQuestion(index);
                 } else {
-                    $(".answerchoice").hide();
+                    $(".playerinput").hide();
                     showScore();
                 }
             }
@@ -185,7 +185,7 @@ $(document).ready(function () {
     function getAnswer() {
 
 
-        $('.answerchoice').on('click', function () {
+        $('.playerinput').on('click', function () {
             console.log('alert', index);
             index++;
             console.log('click', index);
@@ -200,8 +200,7 @@ $(document).ready(function () {
     }
 
     function answerCorrect() {
-        function play_single_sound() {
-            $('#audiotag1').playclip()};
+       
         correct++;
         alert("That's What She Said!");
         console.log("correct");
@@ -210,16 +209,14 @@ $(document).ready(function () {
 
     function answerWrong() {
         wrong++;
-        function play_single_sound() {
-            document.getElementById('audiotag2')[0].play()};
+        
         alert("Please talk to Toby in HR.");
         console.log("wrong");
         
     }
 
     function showScore() {
-        function play_single_sound() {
-            document.getElementById('audiotag3').play()};
+        
         $('.question').empty();
         $('.question').append("<h2><p>" + correct + " correct</p></h2>");
         $('.question').append("<h2><p>" + wrong + " incorrect</p></h2>");
@@ -270,7 +267,7 @@ $(document).ready(function () {
         if (index < questionArray.length) {
             loadQuestion(index);
         } else {
-            $(".answerchoice").hide();
+            $(".playerinput").hide();
             showScore();
         }
     });
