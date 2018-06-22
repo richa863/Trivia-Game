@@ -174,7 +174,7 @@ $(document).ready(function () {
 
     function setup() {
         index = 0;
-        $('.question').append('<button class="btn btn-success" id="startButton">Start</button>');
+        $('.question').append('<button id="startButton">Start</button>');
         $('#startButton').on('click', function () {
             $(this).hide();
             countdownTimer.start();
